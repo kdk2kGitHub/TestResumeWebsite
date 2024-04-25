@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo apt-get update -y
+sudo apt-get install -y apache2
+sudo apt-get install -y unzip
+sudo apt-get install -y git
+sudo git clone https://github.com/kdk2kGitHub/TestResumeWebsite.git
+cd TestResumeWebsite
+sudo unzip myTestSite.zip
+cd myTestSite
+sudo tar -czf myTestSite.tgz * && sudo mv myTestSite.tgz /root/myTestSite.tgz
+sudo cp /root/myTestSite.tgz /var/www/html/
+sudo -i
+cd /var/www/html/ && tar xzf myTestSite.tgz
+exit
